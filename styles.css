@@ -1,0 +1,204 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap');
+
+:root {
+  --primary-color: rgb(223, 193, 201);
+  --secondary-color: hsla(0, 0%, 100%, 0);
+  --button-bg-color: hsla(0, 0%, 100%, 0);
+  --button-text-color: hsl(0, 0%, 0%);
+  --background-light: hsl(198, 77%, 95%);
+  --text-color: hsl(0, 0%, 0%);
+  --font-family-primary: 'Mulish', sans-serif;
+  --font-family-secondary: 'Chakra Petch', sans-serif;
+  --nav-height: 70px;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  color: var(--text-color);
+  padding: 2rem;
+
+  /* Adding the background image */
+  background: url('https://i.pinimg.com/originals/4b/bc/fa/4bbcfa7c3ad5b9d4daf0a96e6745c497.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo h1 {
+  font-family: var(--font-family-secondary);
+  color: var(--primary-color);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.get-started {
+  background-color: var(--button-bg-color); /* Updated to match other buttons */
+  color: var(--button-text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none; /* Ensure it has no border */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.get-started:hover {
+  background-color: hsl(216, 33%, 22%); /* Darker shade on hover */
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--secondary-color);
+}
+
+.hero-content h2 {
+  font-family: var(--font-family-secondary);
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.hero-content p {
+  font-family: var(--font-family-primary); /* Changed font for paragraph */
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-option {
+  display: flex;
+  gap: 1rem;
+}
+
+.search-option input {
+  margin-right: 0.5rem;
+}
+
+.search-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.search-fields input {
+  padding: 0.75rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.75rem 2rem;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(216, 33%, 22%);
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  padding: 2rem;
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+.car-logos img {
+  margin: 0 10px;
+  max-width: 80px;
+}
+
+/* Form Background Color and Font Changes */
+#form {
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: transparent; /* Changed to transparent */
+}
+
+.input-group label {
+  font-family: var(--font-family-primary); /* Changed font for label */
+}
+
+/* Main heading font */
+h1 {
+  font-family: var(--font-family-secondary); /* Main heading font */
+}
+
+/* Style for Account Creation Button */
+.account-creation-button {
+  padding: 0.75rem 2rem; /* Match other button paddings */
+  background-color: var(--button-bg-color); /* Match button background */
+  color: var(--button-text-color); /* Match button text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.account-creation-button:hover {
+  background-color: hsl(216, 33%, 22%); /* Darker shade on hover */
+}
+
+/* Terms and Conditions Button */
+/* Update for Terms and Conditions, Sign In, and Logout buttons */
+.terms-btn,
+.signin-btn,
+.logout-btn {
+  background-color: var(--button-bg-color); /* Same background as Create Account button */
+  color: var(--button-text-color); /* Same text color */
+  padding: 0.75rem 2rem; /* Same padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.terms-btn:hover,
+.signin-btn:hover,
+.logout-btn:hover {
+  background-color: hsl(216, 33%, 22%); /* Darker shade on hover */
+}

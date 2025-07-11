@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <style>
+    /* Importing fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap');
+
+    /* General styles */
+    body {
+      font-family: 'Mulish', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://i.pinimg.com/originals/4b/bc/fa/4bbcfa7c3ad5b9d4daf0a96e6745c497.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .welcome-container {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: rgb(202, 160, 171);
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+      background-color: #48c78e;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #34a76f;
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-container">
+    <h1>Welcome to Our Rental Store!</h1>
+    <p>We're glad to have you here. Click the button below to explore our page.</p>
+    <a href="{{ url_for('main_page') }}">Get Started</a>
+  </div>
+</body>
+</html>

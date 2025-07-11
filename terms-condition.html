@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/sample.css') }}">
+    <style>
+        body {
+            font-family: var(--font-family-primary);
+            background-color: var(--secondary-color);
+            color: black;
+            padding: 2rem;
+        }
+
+        .sign-in-option {
+            text-align: center; 
+            margin-top: 1rem;
+            color: black;
+        }
+
+        /* Styling for terms and conditions */
+        .terms {
+            text-align: left;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: rgb(202, 160, 171);/* Background color */
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            color: black; /* Text color */
+        }
+
+        .terms ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        .terms li {
+            margin-bottom: 1rem;
+        }
+
+        .agree {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Styling for the submit button */
+        input[type="submit"] {
+            background-color: hsl(175, 93%, 34%); /* Button background color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            padding: 0.75rem 1.5rem; /* Padding for the button */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Font size */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        /* Change button color on hover */
+        input[type="submit"]:hover {
+            background-color: hsl(175, 93%, 30%); /* Darker shade on hover */
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            color: hsl(175, 93%, 34%);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: hsl(175, 93%, 40%);
+        }
+    </style>
+</head>
+<body>
+    <div id="form" class="registration-form">
+        <h1>Terms and Conditions</h1>
+
+        <form id="termsForm" onsubmit="return redirectToAccountCreation();">
+            <div class="terms">
+                <h2>Vehicle Rental Terms</h2>
+                <ul>
+                    <li>The renter must hold a valid driving license and be at least 18 years old to rent a vehicle.</li>
+                    <li>The vehicle must be returned in the same condition as when rented.</li>
+                    <li>The renter is responsible for all damages, accidents, and traffic violations during the rental period.</li>
+                    <li>Fuel charges are not included in the rental fee. The vehicle must be returned with the same fuel level.</li>
+                    <li>Additional charges may apply for late returns or extra kilometers driven beyond the agreed limit.</li>
+                    <li>200/- per hour</li>
+                    <li>Driver fees will be 80/- for 1 hour, which is separate from travel charges.</li>
+                    <li>Without driver only travel charges.</li>
+                    <li>Vehicles rented without a driver must be operated by the renter or authorized individuals.</li>
+                    <li>Cancellations made within 24 hours of the rental period will be subject to a cancellation fee.</li>
+                </ul>
+                <a href="welcome.html">Back to Home</a>
+
+                <div class="agree">
+                    <label>
+                        <input type="checkbox" id="agree" name="agree" required> I agree to the terms and conditions
+                    </label>
+                </div>
+            </div>
+
+            <div class="sign-in-option">
+                <input type="submit" value="Proceed to Sign In">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function redirectToAccountCreation() {
+            const isChecked = document.getElementById('agree').checked;
+            if (isChecked) {
+                // Redirect to the Account Creation page
+                window.location.href = 'account_creation.html'; // Adjust this if your file name is different
+                return false; // Prevent the form from submitting in the traditional way
+            } else {
+                alert("You must agree to the terms and conditions to proceed.");
+                return false; // Prevent form submission if not checked
+            }
+        }
+    </script>
+</body>
+</html>

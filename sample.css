@@ -1,0 +1,147 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap');
+
+/* Root variables */
+:root {
+  --international-orange-engineering: hsl(175, 93%, 34%);
+  --cadet-blue-creyola: rgb(0, 0, 0);
+  --oxford-blue-1: rgb(223, 193, 201);
+  --sonic-silver: hsl(0, 0%, 44%);
+  --space-cadet: rgb(223, 193, 201);
+  --pastel-pink: hsl(175, 93%, 34%);
+  --eerie-black: hsl(0, 0%, 15%);
+  --light-gray: rgb(223, 193, 201);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  --ff-chakra-petch: 'Chakra Petch', sans-serif;
+  --ff-mulish: 'Mulish', sans-serif;
+
+  --fs-1: 2.8rem; /* Font size for heading */
+  --fs-4: 1.8rem;
+  --fs-5: 1.2rem; /* Font size for button */
+  --fs-6: 1.0rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --section-padding: 60px;
+  --shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  --radius-pill: 100px;
+  --radius-circle: 50%;
+  --transition: 0.25s ease;
+}
+
+body {
+  font-family: var(--ff-mulish);
+  color: var(--white);
+  padding: 2rem;
+
+  /* Adding the background image */
+  background: url('https://i.pinimg.com/originals/4b/bc/fa/4bbcfa7c3ad5b9d4daf0a96e6745c497.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Styling for the top-right buttons */
+.top-right-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.top-right-buttons .btn {
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 10px 20px;
+  background-color: var(--international-orange-engineering); /* Button background */
+  color: var(--black); /* Button text color */
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-5); /* Font size for buttons */
+  transition: background-color var(--transition);
+}
+
+.top-right-buttons .btn:hover {
+  background-color: var(--pastel-pink); /* Button hover color */
+}
+
+/* Main page styling */
+h1 {
+  font-family: var(--ff-chakra-petch);
+  font-size: var(--fs-1);
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* General layout for main links */
+.main-links {
+  margin-top: 100px; /* Space below buttons */
+}
+
+.main-links a {
+  display: block;
+  margin: 10px 0;
+  font-size: var(--fs-4);
+  text-decoration: none;
+  color: var(--white);
+}
+
+.main-links a:hover {
+  color: var(--international-orange-engineering); /* Change color on hover */
+}
+
+/* Styling for the form */
+#form {
+  padding: 2rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--white);
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  color: var(--cadet-blue-creyola);
+  margin-bottom: 0.5rem;
+}
+
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: var(--fs-6);
+  border: 1px solid var(--light-gray);
+  border-radius: 0.5rem;
+  background-color: var(--oxford-blue-1);
+  color: var(--black);
+}
+
+.input-group input::placeholder {
+  color: var(--sonic-silver);
+}
+
+button {
+  background-color: var(--international-orange-engineering);
+  color: var(--black);
+  padding: 0.75rem 1.5rem;
+  font-size: var(--fs-5);
+  font-weight: var(--fw-700);
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  transition: background-color var(--transition);
+}
+
+button:hover {
+  background-color: var(--pastel-pink);
+}
