@@ -72,8 +72,7 @@ python app.py
 Visit http://localhost:5000 in your browser
 
 ## Screenshots
-[Final Output](images/output.png)
-
+![Final Output](images/output.jpg)
 
 
 **Made By**
